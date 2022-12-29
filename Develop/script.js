@@ -1,9 +1,12 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-let today = dayjs();
-$('#currentDay').text(today.format('[Today is: ] dddd, MMM D, YYYY'));
-
+function displayDateAndTime() {
+  let today = dayjs();
+  $('#currentDay').text(today.format('[Today is: ] dddd, MMM D, YYYY h:mm:ss a'));
+  setTimeout(displayDateAndTime, 1000);
+}
+displayDateAndTime()
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
