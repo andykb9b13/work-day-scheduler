@@ -25,13 +25,13 @@ $(function () {
     setTimeout(displayDateAndTime, 1000);
   }
 
-  function setTasksFromStorage() {
+  function getTasksFromStorage() {
     for (let i = 0; i < hourBlockEl.length; i++) {
       hourNumFromStorage = 'hour' + (i + 9);
       savedTask = localStorage.getItem(hourNumFromStorage);
       $(hourBlockEl[i]).children('.description').text(savedTask);
     }
   }
-  setTasksFromStorage()
+  getTasksFromStorage()
   displayDateAndTime()
 });
