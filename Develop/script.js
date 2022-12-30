@@ -3,48 +3,21 @@
 // in the html.
 function displayDateAndTime() {
   let today = dayjs();
-  let hour = today.hour();
-  // console.log(hour)
-  let hourBlock = $('.time-block');
-  // console.log(hourBlock);
   $('#currentDay').text(today.format('[Today is: ] dddd, MMM D, YYYY h:mm:ss a'));
-
-
-  hourBlock.each(function () {
-    let hourDigit = $(this).attr('id').replace(/^\D+/g, '')
-    // console.log(hour)
-    // console.log(hourDigit)
-    if (hourDigit == hour) {
-      // console.log("we've got a winner!")
-      $(this).attr('class', 'row time-block present')
-    } else if (hourDigit < hour) {
-      $(this).attr('class', 'row time-block past')
-    } else {
-      $(this).attr('class', 'row time-block future')
-    }
-    setTimeout(displayDateAndTime, 1000);
-  })
+  setTimeout(displayDateAndTime, 1000);
 }
 displayDateAndTime()
-
-// This will grab the number from the hour id let hourNumber = thestring.replace(/^\D+/g, '')
-
-// Need to set a conditional for the hour to affect the .class of the div "past, present, or future"
 
 $(function () {
 
 
   $('.saveBtn').click(function () {
-    console.log("the save button function is being heard")
+    // console.log("the save button function is being heard")
     let hourNumber = $(this).parent().attr('id')
-    console.log(hourNumber)
+    // console.log(hourNumber)
     let hourText = $(this).siblings('.description').val();
-
-    let hourDigit = hourNumber.replace(/^\D+/g, '');
-    console.log(hourDigit);
-
-    console.log(hourText);
-    alert(hourText);
+    // console.log(hourText);
+    // alert(hourText);
     localStorage.setItem(hourNumber, hourText)
   })
 
