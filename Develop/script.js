@@ -1,5 +1,5 @@
 
-$(function () {
+$(document).ready(function () {
   let today = dayjs();
   let hour = today.hour();
   let hourBlockEl = $('.time-block');
@@ -32,6 +32,16 @@ $(function () {
       $(hourBlockEl[i]).children('.description').text(savedTask);
     }
   }
+
+  $('.clear-schedule').click(function () {
+    localStorage.clear()
+    $(hourBlockEl).each(function () {
+      hourBlockEl.children('.description').text('');
+    })
+  })
+
   getTasksFromStorage()
   displayDateAndTime()
 });
+
+
