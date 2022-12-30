@@ -1,6 +1,10 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+let today = dayjs();
+let hour = today.hour();
+let hourBlockEl = $('.time-block');
+let hourBlockInnerText = $('.time-block').children('.description');
 
 $(function () {
   $('.saveBtn').click(function () {
@@ -10,9 +14,7 @@ $(function () {
   })
 
   function displayDateAndTime() {
-    let today = dayjs();
-    let hour = today.hour();
-    let hourBlockEl = $('.time-block');
+
     $('#currentDay').text(today.format('[Today is: ] dddd, MMM D, YYYY hh:mm:ss a'));
 
     hourBlockEl.each(function () {
@@ -27,6 +29,12 @@ $(function () {
     })
     setTimeout(displayDateAndTime, 1000);
   }
+
+  function setSavedTasks() {
+    let hourlyTask = localStorage.getItem('hour-12');
+    $(hourBlockInnerText).text(hourlyTask);
+  }
+  setSavedTasks()
 
   displayDateAndTime()
 
