@@ -6,11 +6,22 @@ let hour = today.hour();
 let hourBlockEl = $('.time-block');
 let hourBlockInnerText = $('.time-block').children('.description');
 
+function setTasksFromStorage() {
+  for (let i = 0; i < hourBlockEl.length; i++) {
+    hourNumFromStorage = 'hour' + (i + 9);
+    console.log(hourNumFromStorage);
+    savedTask = localStorage.getItem(hourNumFromStorage);
+    $(hourBlockEl[i]).children('.description').text(savedTask);
+  }
+}
+setTasksFromStorage()
+
+
 $(function () {
   $('.saveBtn').click(function () {
-    let hourNumber = $(this).parent().attr('id')
+    let hourNumber = $(this).parent().attr('id');
     let hourText = $(this).siblings('.description').val();
-    localStorage.setItem(hourNumber, hourText)
+    localStorage.setItem(hourNumber, hourText);
   })
 
   function displayDateAndTime() {
@@ -30,11 +41,7 @@ $(function () {
     setTimeout(displayDateAndTime, 1000);
   }
 
-  function setSavedTasks() {
-    let hourlyTask = localStorage.getItem('hour-12');
-    $(hourBlockInnerText).text(hourlyTask);
-  }
-  setSavedTasks()
+
 
   displayDateAndTime()
 
