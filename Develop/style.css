@@ -57,3 +57,15 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.clear-schedule {
+  margin: 20px;
+  height: 50px;
+  width: 125px;
+  border-radius: 15px;
+}
+
+.clear-schedule:hover {
+  background-color: #06aed5;
+  color: white;
+}
