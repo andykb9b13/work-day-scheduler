@@ -1,4 +1,5 @@
 
+
 $(document).ready(function () {
   let today = dayjs();
   let hour = today.hour();
@@ -11,7 +12,8 @@ $(document).ready(function () {
   })
 
   function displayDateAndTime() {
-    $('#currentDay').text(today.format('[Today is: ] dddd, MMM D, YYYY hh:mm:ss a'));
+    today = dayjs();
+    $('#currentDay').text(today.format('[Today is: ] dddd, MMM D YYYY, h:mm:ss a'));
     hourBlockEl.each(function () {
       let hourBlockNum = $(this).attr('id').replace(/^\D+/g, '')
       if (hourBlockNum == hour) {
@@ -34,10 +36,8 @@ $(document).ready(function () {
   }
 
   $('.clear-schedule').click(function () {
+    hourBlockEl.children('.description').val("");
     localStorage.clear()
-    $(hourBlockEl).each(function () {
-      hourBlockEl.children('.description').text('');
-    })
   })
 
   getTasksFromStorage()
