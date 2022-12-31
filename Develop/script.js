@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
   let today = dayjs();
   let hour = today.hour();
@@ -43,5 +41,3 @@ $(document).ready(function () {
   getTasksFromStorage()
   displayDateAndTime()
 });
-
-

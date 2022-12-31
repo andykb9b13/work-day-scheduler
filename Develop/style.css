@@ -60,13 +60,15 @@ textarea {
 
 .clear-schedule {
   margin: 20px;
-  width: 125px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  width: 225px;
+  border-radius: 15px;
   padding: 7px;
+  justify-content: center;
 }
 
 .clear-schedule:hover {
   background-color: #06aed5;
   color: white;
+  font-size: 1.1em;
+  transition: all 0.3s;
 }
