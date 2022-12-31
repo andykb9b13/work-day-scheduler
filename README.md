@@ -22,5 +22,4 @@ The inputted information is saved in local storage and persists after the browse
 ![Work Day Scheduler Input](assets/images/scheduler-input.png)
 
 ## Link to Live Site
-
-
+[Link to the live site](https://andykb9b13.github.io/work-day-scheduler/)
