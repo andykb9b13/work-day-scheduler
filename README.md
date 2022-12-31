@@ -10,13 +10,14 @@ Simplicity, clarity, and ease of UI/UX were the primary goals for this applicati
 ```
 When the user enters the app, they are able to see the current day and time displayed at the top of the calendar.
 There is a color legend to tell you which time blocks are in the past, present, or future.
-Each of the timeblocks is color coded. 
+Each of the timeblocks is color coded and the user can input information into each timeblock.
+There is a button that will clear the schedule on the page and clear the local storage.
 ```
 ![Work Day Scheduler Landing Page](assets/landing-page.png)
 
 ```
 When the user inputs a task into a timeblock, they are able to save the information for future recall.
-The inputted information is saved in local-storage and persists after the browser is closed.
+The inputted information is saved in local storage and persists after the browser is closed.
 ```
 ![Work Day Scheduler Input](assets/scheduler-input.png)
 
