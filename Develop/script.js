@@ -5,8 +5,8 @@ $(document).ready(function () {
 
   $('.saveBtn').click(function () {
     let hourNumber = $(this).parent().attr('id');
-    let hourText = $(this).siblings('.description').val();
-    localStorage.setItem(hourNumber, hourText);
+    let taskText = $(this).siblings('.description').val();
+    localStorage.setItem(hourNumber, taskText);
   })
 
   function displayDateAndTime() {

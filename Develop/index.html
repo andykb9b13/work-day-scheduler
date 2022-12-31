@@ -19,6 +19,21 @@
     <p class="lead">A Calendar App for Scheduling Your Work Day</p>
     <p id="currentDay" class="lead"></p>
   </header>
+  <div id="color-legend" class="container col-lg-2 col-md-3 col-sm-3 mb-4 px-5 py-1">
+    <div class="row">
+      <div class="color-box past"></div>
+      <div class="col-4">past</div>
+    </div>
+    <div class="row">
+      <div class="color-box present"></div>
+      <div class="col-4">present</div>
+    </div>
+    <div class="row">
+      <div class="color-box future"></div>
+      <div class="col-4">future</div>
+    </div>
+
+  </div>
   <div class="outer-box container-lg px-5">
 
     <div id="hour9" class="row time-block past">
@@ -94,9 +109,7 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="container col-4">
-      <button class="clear-schedule">Clear Schedule</button>
-    </div>
+    <button class="clear-schedule">Clear Schedule</button>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
