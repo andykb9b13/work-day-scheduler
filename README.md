@@ -13,13 +13,13 @@ There is a color legend to tell you which time blocks are in the past, present, 
 Each of the timeblocks is color coded and the user can input information into each timeblock.
 There is a button that will clear the schedule on the page and clear the local storage.
 ```
-![Work Day Scheduler Landing Page](assets/landing-page.png)
+![Work Day Scheduler Landing Page](./Assets/landing-page.png)
 
 ```
 When the user inputs a task into a timeblock, they are able to save the information for future recall.
 The inputted information is saved in local storage and persists after the browser is closed.
 ```
-![Work Day Scheduler Input](assets/scheduler-input.png)
+![Work Day Scheduler Input](./Assets/scheduler-input.png)
 
 ## Link to Live Site
 
