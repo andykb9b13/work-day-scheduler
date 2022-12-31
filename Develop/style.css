@@ -46,7 +46,7 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #8f8d8d;
   color: white;
 }
 
@@ -83,6 +83,6 @@ textarea {
 .clear-schedule:hover {
   background-color: #06aed5;
   color: white;
-  font-size: 1.1em;
+  font-size: 1.05em;
   transition: all 0.3s;
 }

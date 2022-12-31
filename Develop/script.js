@@ -7,6 +7,7 @@ $(document).ready(function () {
     let hourNumber = $(this).parent().attr('id');
     let taskText = $(this).siblings('.description').val();
     localStorage.setItem(hourNumber, taskText);
+    $(this).siblings('.description').css({ "color": "white", "transition": "all 0.6s", "font-style": "normal" })
   })
 
   function displayDateAndTime() {
@@ -36,6 +37,7 @@ $(document).ready(function () {
   $('.clear-schedule').click(function () {
     hourBlockEl.children('.description').val("");
     localStorage.clear()
+    hourBlockEl.children('.description').css({ "color": "black", "transition": "0.6s", "font-style": "normal" })
   })
 
   getTasksFromStorage()
